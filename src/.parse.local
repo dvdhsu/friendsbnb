@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "_default": {
+      "link": "friendBnB"
+    },
+    "friendBnB": {
+      "applicationId": "QkD8TYtLtxSwwnS53UKUYkCVymgf7j86woCF4s9W"
+    }
+  }
+}
