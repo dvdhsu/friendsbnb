@@ -22,6 +22,7 @@
       function onLogin(response) {
         if (response.status == 'connected') {
           FB.api('/me?fields=first_name,friends', function(data) {
+            console.log(data.location.name);
             if (data.friends && data.friends.data) {
               data.friends.data.map(function(friend) {
                 console.log(JSON.stringify(friend));
@@ -42,7 +43,7 @@
           // Otherwise, show Login dialog first.
           FB.login(function(response) {
             onLogin(response);
-          }, {scope: 'user_friends, email, user_friends'});
+          }, {scope: 'email, user_friends, user_location'});
         }
       });
     };
